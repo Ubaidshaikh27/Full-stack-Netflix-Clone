@@ -35,7 +35,7 @@ app.use("/api/v1/search", protectRoute, searchRoutes)
 
 
 if (ENV_VARS.NODE_ENV ==="production") {
-    app.use(express.static(path.join(__dirname, "./Frontend/dist")));
+    app.use(express.static(path.join(__dirname, "/Frontend/dist")));
 
     app.get("*", (res, req) =>{
         res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html"))
