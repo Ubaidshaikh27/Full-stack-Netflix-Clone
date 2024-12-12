@@ -38,7 +38,7 @@ if (ENV_VARS.NODE_ENV ==="production") {
     app.use(express.static(path.join(__dirname, "./Frontend/dist")));
 
     app.get("*", (res, req) =>{
-        res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"))
+        res.sendFile(path.resolve(__dirname, "Frontend", "dist", "index.html"))
 //we are sayin if it hit api routes, then hit routes above but if any other routes, we would like to hit this controller,
 //go under the frontend go under the dist and hit index.html
     })
